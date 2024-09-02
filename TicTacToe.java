@@ -1,8 +1,6 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
 import java.util.*;
 
-class TicTacToe {
+class HelloWorld {
     static String current;
     static String[] board;
     static String checkWinner() {
@@ -66,7 +64,6 @@ class TicTacToe {
            
                 if(board[numInput-1]!="X" && board[numInput-1]!="O"){
                     board[numInput-1] = current;
-                    current = current=="X" ? "O" : "X";
                     printTicTac();
                 }else{
                     System.out.println("Please enter at empty place.");
@@ -74,6 +71,7 @@ class TicTacToe {
                      continue;
                 }
                 winner = checkWinner();
+                current = current=="X" ? "O" : "X";
         }
     }
 }
